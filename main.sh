@@ -3,9 +3,6 @@
 IP_TO_ADD="132.145.125.18"
 HOSTNAME="lobby-v2.klei.com"
 
-# 备份 hosts 文件
-cp /etc/hosts /etc/hosts.bak
-
 # 检查 hosts 文件是否已经存在该记录
 if grep -q "$HOSTNAME" /etc/hosts; then
     echo "hosts 文件中已存在 $HOSTNAME，更新为 $IP_TO_ADD"
